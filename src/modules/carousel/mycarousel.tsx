@@ -1,4 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
+import carousel1 from "@assets/carousel1.jpg"
+import carousel2 from "@assets/carousel2.jpg"
+import carousel3 from "@assets/carousel3.jpg"
 
 export const MyCarousel = () => {
   return (
@@ -18,17 +21,17 @@ export const MyCarousel = () => {
       )}
     >
       <img
-        src="https://get.wallhere.com/photo/black-monochrome-hands-night-photography-books-Nikon-library-fingers-sound-blackandwhite-bw-book-darkness-d5100-black-and-white-monochrome-photography-font-bookstore-johnidis-prozak-plato-musical-instrument-accessory-793266.jpg"
+        src={ carousel1 }
         alt="image 1"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://biograph.online/wp-content/uploads/2021/11/V.-Nabokov-v-SSHA-foto-1959-g..jpg"
+        src={ carousel2 }
         alt="image 2"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://cs13.pikabu.ru/post_img/2023/08/22/4/og_og_1692681843275026473.jpg"
+        src={ carousel3 }
         alt="image 3"
         className="h-full w-full object-cover"
       />

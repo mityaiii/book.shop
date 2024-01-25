@@ -1,16 +1,23 @@
-import { Typography } from '@material-tailwind/react'
+import { useNavbarItems } from '@/stores/navbarItem.store'
+import { Link } from 'react-router-dom';
 
-export const NavbarItem = ({ value }: {
-    value: string,
+export const NavbarItem = ({ indx, value }: {
+  indx: number,
+  value: INavbarItem,
 }) => {
+  const state = useNavbarItems(); 
+
   return (
-    <li>
-			<Typography
-				as='a'
-        href="#"
-        color="blue-gray"
-        className="font-normal transition-colors hover:text-primary"
-			>{ value }</Typography>
+    <li
+      onClick={() => { 
+        state.setIndxOfActiveLink(indx)
+      }}
+    >
+			<Link
+        to={ value.link }
+        className={`font-normal transition-colors hover:text-primary 
+        ${ state.indxOfActiveLink === indx ? 'text-primary' : 'text-black'}`}
+			>{ value.title }</Link>
     </li> 
   )
 }

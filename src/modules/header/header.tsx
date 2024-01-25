@@ -1,7 +1,7 @@
 import { HeaderHoc } from './components/header.hoc'
 
 export const Header = ({ navbarItems }: {
-  navbarItems: string[]
+  navbarItems: INavbarItem[]
 }) => {
   return (
     <header>

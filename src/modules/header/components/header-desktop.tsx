@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Logo } from './logo'
 
 export const HeaderDesktop = ({ className, navbarItems }: {
-  navbarItems: string[],
+  navbarItems: INavbarItem[],
   className?: string,
 }) => {
   return (
@@ -17,7 +17,7 @@ export const HeaderDesktop = ({ className, navbarItems }: {
       <nav className='py-4 px-2 border-b-2 border-primary max-w-[1280px] w-4/5 flex justify-between mx-auto items-center'>
         <Logo/>
         <ul className='flex gap-x-8'>
-          { navbarItems.map((value, indx) => <NavbarItem key={indx} value={value}/>) }
+          { navbarItems.map((value, indx) => <NavbarItem key={indx} indx={indx} value={value}/>) }
         </ul>
       </nav>
     </motion.div>

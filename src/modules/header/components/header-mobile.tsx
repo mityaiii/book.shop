@@ -20,7 +20,7 @@ const variants = {
 
 export const HeaderMobile = ({ className, navbarItems }: {
     className?: string,
-    navbarItems: string[],
+    navbarItems: INavbarItem[],
   }) => {
   const [navState, setNavState] = useCycle('hidden', 'inView')
 

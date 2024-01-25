@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge"
+import defaultImage from "@/assets/default-image.jpeg"
 
 export const ImageWithShadow = ({ className, src, alt }: {
     className?: string
@@ -8,7 +9,7 @@ export const ImageWithShadow = ({ className, src, alt }: {
   return (
     <img
       className={twMerge('h-full w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50', className)}
-      src={ src || "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80" }
+      src={ src || defaultImage }
       alt={ alt || "nature image" }
     />
   )

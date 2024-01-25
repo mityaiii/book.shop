@@ -2,7 +2,7 @@ import { Typography } from '@material-tailwind/react'
 
 
 export const Footer = ({ navbarItems }: {
-  navbarItems: string[]
+  navbarItems: INavbarItem[]
 }) => {
   return (
     <footer className="w-full bg-white p-8">
@@ -12,11 +12,11 @@ export const Footer = ({ navbarItems }: {
           { navbarItems.map((value, indx) => <li key={indx}>
             <Typography
               as="a"
-              href="#"
+              href={ value.link }
               color="blue-gray"
               className="font-normal transition-colors hover:text-primary"
             >
-              { value }
+              { value.title }
             </Typography>
           </li>) }
         </ul>
